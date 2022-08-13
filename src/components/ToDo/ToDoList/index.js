@@ -11,7 +11,7 @@ const ToDoList = ({ tasks, deleteTask, setDoneTask, filteredTasks}) => {
           <li key={task.id} className={styles.to_do}>
             <span
               className={
-                task.isDone ? styles.completed_task : !styles.completed_task
+                task.isDone ? styles.completed_task : undefined
               }
             >
               {task.body}

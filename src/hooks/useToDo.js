@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const useToDo = (initalValue) => {
   const [tasks, setTasks] = useState(initalValue);
-  const [filteredTasks, setFilteredTasks] = useState([tasks]);
-
+  const [filteredTasks, setFilteredTasks] = useState(tasks);
+  useEffect(() => {
+    setFilteredTasks(tasks)
+  }, [tasks])
+  
   return {
     tasks,
     filteredTasks,
