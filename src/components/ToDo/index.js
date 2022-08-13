@@ -19,7 +19,7 @@ const ToDo = () => {
       <Header selectTask={selectTask} />
       <ToDoForm addTask={addTask} />
       <ToDoList
-        tasks={filteredTasks}
+        filteredTasks={filteredTasks}
         deleteTask={deleteTask}
         setDoneTask={setDoneTask}
       />

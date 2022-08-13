@@ -3,17 +3,13 @@ import styles from "./ToDoList.module.scss";
 import CheckIcon from "@mui/icons-material/Check";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 
-const ToDoList = ({ tasks, deleteTask, setDoneTask, filteredTasks}) => {
+const ToDoList = ({ deleteTask, setDoneTask, filteredTasks }) => {
   return (
     <div>
       <ul className={styles.to_do_list}>
-        {tasks.map((task) => (
+        {filteredTasks.map((task) => (
           <li key={task.id} className={styles.to_do}>
-            <span
-              className={
-                task.isDone ? styles.completed_task : undefined
-              }
-            >
+            <span className={task.isDone ? styles.completed_task : ""}>
               {task.body}
             </span>
             <button

@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 
 const useToDo = (initalValue) => {
   const [tasks, setTasks] = useState(initalValue);
-  const [filteredTasks, setFilteredTasks] = useState(tasks);
+  const [filteredTasks, setFilteredTasks] = useState([...tasks]);
   useEffect(() => {
-    setFilteredTasks(tasks)
-  }, [tasks])
-  
+    setFilteredTasks(tasks);
+  }, [tasks]);
+
   return {
     tasks,
     filteredTasks,
@@ -40,8 +40,8 @@ const useToDo = (initalValue) => {
     selectTask: (isDone) => {
       if (isDone === "All") {
         setFilteredTasks(tasks);
-      }else{
-        let newToDo = [...tasks].filter(tasks => tasks.isDone === isDone)
+      } else {
+        let newToDo = [...tasks].filter((tasks) => tasks.isDone === isDone);
         setFilteredTasks(newToDo);
       }
     },
