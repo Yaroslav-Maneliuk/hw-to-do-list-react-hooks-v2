@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const useToDo = (initalValue) => {
   const [tasks, setTasks] = useState(initalValue);
-  const [filteredTasks, setFilteredTasks] = useState([initalValue]);
+  const [filteredTasks, setFilteredTasks] = useState([tasks]);
 
   return {
     tasks,
