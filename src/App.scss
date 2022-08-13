@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    20deg,
+    rgb(0, 242, 250) 0%,
+    rgb(241, 7, 210) 100%
+  );
+  color: #fff;
+  font-family: sans-serif;
+  min-height: 100vh;
+}

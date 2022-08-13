@@ -1,0 +1,30 @@
+.to_do_form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.to_do_form_input,
+.to_do_form_button{
+  padding: 0.5rem;
+  margin-bottom: 3rem;
+  font-size: 1.75rem;
+  background: rgb(255, 255, 255);
+  outline: 0;
+  border: none;
+  color: gray;
+}
+
+.to_do_form_button {
+  cursor: pointer;
+  color:  rgb(241, 7, 210);
+  transition: all 0.2s ease;
+}
+
+.to_do_form_button:hover {
+  color:  rgb(0, 242, 250);
+}
+
+.initial_values{
+  color: gray;
+}

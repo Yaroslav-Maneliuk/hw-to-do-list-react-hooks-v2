@@ -1,0 +1,42 @@
+.to_do_list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 30%;
+  list-style: none;
+}
+
+.to_do{
+  width: 35%;
+  margin: 0.5rem;
+  background: white;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: rgb(241, 7, 210);
+}
+
+.complete_to_do_button,
+.delete_to_do_button{
+  background: rgb(204, 120, 253);
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  cursor: pointer;
+  font-size: 0.2rem;
+}
+
+.complete_to_do_button {
+  background: #a301c4;
+}
+
+.completed_task {
+  text-decoration: line-through;
+}
+
+span {
+  flex: 1;
+  margin: 0 1rem;
+}
