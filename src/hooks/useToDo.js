@@ -10,7 +10,7 @@ const useToDo = (initalValue) => {
   return {
     tasks,
     filteredTasks,
-    addTask: (value) => {
+    addTask: (value, {resetForm}) => {
       if (value.body !== "") {
         const newTask = {
           id: Date.now(),
@@ -18,6 +18,7 @@ const useToDo = (initalValue) => {
           isDone: false,
         };
         setTasks([...tasks, newTask]);
+        resetForm({value:""})
       }
     },
     setDoneTask: (id) => {
